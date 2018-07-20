@@ -1,0 +1,675 @@
+[{
+    "type": "file",
+    "additionalAttributes": [
+    {
+        "type": "String",
+        "id": 2340,
+        "name": ".NET Assembly References",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2320,
+        "name": "AV Scan Timestamp",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "Regex",
+        "id": 2286,
+        "name": "Code Page",
+        "ownerName": "System",
+        "rule": "([1-9]|[1-8][0-9]|9[0-9]|[1-8][0-9]{2}|9[0-8][0-9]|99[0-9]|[1-8][0-9]{3}|9[0-8][0-9]{2}|99[0-8][0-9]|999[0-9]|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[01][0-9]|65520)"
+    },
+    {
+        "type": "Integer",
+        "id": 2319,
+        "name": "Detection Percentage",
+        "ownerName": "System",
+        "rule": "0:100"
+    },
+    {
+        "type": "String",
+        "id": 2304,
+        "name": "Document Author",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2305,
+        "name": "Document Company",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2306,
+        "name": "Document Creation Tool",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2335,
+        "name": "Document Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2307,
+        "name": "Document Last Modified By",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2334,
+        "name": "Document Subject",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2308,
+        "name": "Document Title",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 4,
+        "name": "Malware Controller Availability",
+        "ownerName": "System",
+        "rule": "Public Free;Public Paid;Custom Variant of Public Malware;Underground;Not Publicly Available;Other;"
+    },
+    {
+        "type": "String",
+        "id": 2310,
+        "name": "PDF Producer",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2312,
+        "name": "PE Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 1633,
+        "name": "PE Hex Timestamp",
+        "ownerName": "System",
+        "rule": "[a-f0-9]{8}"
+    },
+    {
+        "type": "String",
+        "id": 2313,
+        "name": "PE Version",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 3,
+        "name": "TTP Description: Malware/Tool Information",
+        "ownerName": "System"
+    }],
+    "wizardAttributes": [
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Additional Analysis and Context",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2281,
+        "name": "Bitcoin Address",
+        "ownerName": "System",
+        "rule": "[13][a-zA-Z0-9]{26,33}"
+    },
+    {
+        "type": "Regex",
+        "id": 2290,
+        "name": "Creation Timestamp",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "Regex",
+        "id": 2282,
+        "name": "Debug Symbol Path",
+        "ownerName": "System",
+        "rule": "(?:[a-zA-Z]:\\\\)?.+\\.(?:pdb|dbg)$"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2317,
+        "name": "Entropy",
+        "ownerName": "System",
+        "rule": "(?:[0-7]\\.[0-9]{2})|8\\.00"
+    },
+    {
+        "type": "Regex",
+        "id": 1635,
+        "name": "Entry Point",
+        "ownerName": "System",
+        "rule": "[a-f0-9]{8}"
+    },
+    {
+        "type": "String",
+        "id": 2287,
+        "name": "File Type",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2318,
+        "name": "First Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "Regex",
+        "id": 10005,
+        "name": "Import Hash",
+        "ownerName": "System",
+        "rule": "[a-f0-9]{32}"
+    },
+    {
+        "type": "Regex",
+        "id": 1628,
+        "name": "Last Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "Regex",
+        "id": 2288,
+        "name": "MIME Type",
+        "ownerName": "System",
+        "rule": "[-\\w]+/[-\\w+]+"
+    },
+    {
+        "type": "Regex",
+        "id": 2309,
+        "name": "Modified Timestamp",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "String",
+        "id": 5,
+        "name": "Network Protocol Analysis",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2341,
+        "name": "PE Imports",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2343,
+        "name": "PE Resources",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 2342,
+        "name": "PE Sections",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 1634,
+        "name": "PE Timestamp",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 17,
+        "name": "Phase of Intrusion",
+        "ownerName": "System",
+        "rule": "Reconnaissance;Weaponization;Delivery;Exploitation;Installation;C2;Actions on Objectives"
+    },
+    {
+        "type": "Regex",
+        "id": 10006,
+        "name": "SHA512 Hash",
+        "ownerName": "System",
+        "rule": "[a-f0-9]{128}"
+    },
+    {
+        "type": "String",
+        "id": 99,
+        "name": "Signing Certificate Metadata",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Source",
+        "ownerName": "System"
+    },
+    {
+        "type": "DateTime",
+        "id": 21,
+        "name": "Source Date Time",
+        "ownerName": "System",
+        "rule": ""
+    },
+    {
+        "type": "String",
+        "id": 29,
+        "name": "Strings",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 10007,
+        "name": "ssdeep Hash",
+        "ownerName": "System",
+        "rule": "[0-9]+:.+:.+"
+    }],
+    "requiredAttributes": ["Description", "File Type", "First Seen", "Source", "Source Date Time", "ssdeep Hash"]
+}, {
+    "type": "host",
+    "additionalAttributes": [],
+    "wizardAttributes": [
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Additional Analysis and Context",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2281,
+        "name": "Bitcoin Address",
+        "ownerName": "System",
+        "rule": "[13][a-zA-Z0-9]{26,33}"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2318,
+        "name": "First Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "SelectOne",
+        "id": 19,
+        "name": "IP and Host Usage",
+        "ownerName": "System",
+        "rule": "C2;Tool Server;Web Hosted Exploit;Remote Exploit;Vulnerability Scan;Exfiltration Point;Adversary Source Host;Phishing Mailserver;Dynamic DNS Host;Sinkhole;Phishing Origin;Phishing Relay;Parking;Malware Hosting;Phishing Site;Other;"
+    },
+    {
+        "type": "SelectOne",
+        "id": 2,
+        "name": "Infrastructure Ownership",
+        "ownerName": "System",
+        "rule": "Adversary Owned;Adversary Leased;Adversary Subverted;Unknown;"
+    },
+    {
+        "type": "Regex",
+        "id": 1628,
+        "name": "Last Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "String",
+        "id": 5,
+        "name": "Network Protocol Analysis",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 17,
+        "name": "Phase of Intrusion",
+        "ownerName": "System",
+        "rule": "Reconnaissance;Weaponization;Delivery;Exploitation;Installation;C2;Actions on Objectives"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Source",
+        "ownerName": "System"
+    },
+    {
+        "type": "DateTime",
+        "id": 21,
+        "name": "Source Date Time",
+        "ownerName": "System",
+        "rule": ""
+    }],
+    "requiredAttributes": ["Description", "First Seen", "Infrastructure Ownership", "Source", "Source Date Time"]
+}, {
+    "type": "address",
+    "additionalAttributes": [],
+    "wizardAttributes": [
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Additional Analysis and Context",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2318,
+        "name": "First Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "SelectOne",
+        "id": 19,
+        "name": "IP and Host Usage",
+        "ownerName": "System",
+        "rule": "C2;Tool Server;Web Hosted Exploit;Remote Exploit;Vulnerability Scan;Exfiltration Point;Adversary Source Host;Phishing Mailserver;Dynamic DNS Host;Sinkhole;Phishing Origin;Phishing Relay;Parking;Malware Hosting;Phishing Site;Other;"
+    },
+    {
+        "type": "SelectOne",
+        "id": 2,
+        "name": "Infrastructure Ownership",
+        "ownerName": "System",
+        "rule": "Adversary Owned;Adversary Leased;Adversary Subverted;Unknown;"
+    },
+    {
+        "type": "Regex",
+        "id": 1628,
+        "name": "Last Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "String",
+        "id": 5,
+        "name": "Network Protocol Analysis",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 17,
+        "name": "Phase of Intrusion",
+        "ownerName": "System",
+        "rule": "Reconnaissance;Weaponization;Delivery;Exploitation;Installation;C2;Actions on Objectives"
+    },
+    {
+        "type": "Regex",
+        "id": 2289,
+        "name": "SSH Fingerprint",
+        "ownerName": "System",
+        "rule": "(?:[a-f\\d]{32}|[A-Za-z0-9+/]{43}=)"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Source",
+        "ownerName": "System"
+    },
+    {
+        "type": "DateTime",
+        "id": 21,
+        "name": "Source Date Time",
+        "ownerName": "System",
+        "rule": ""
+    }],
+    "requiredAttributes": ["Description", "First Seen", "Infrastructure Ownership", "Source", "Source Date Time"]
+}, {
+    "type": "url",
+    "additionalAttributes": [],
+    "wizardAttributes": [
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Additional Analysis and Context",
+        "ownerName": "System"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2318,
+        "name": "First Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "SelectOne",
+        "id": 2,
+        "name": "Infrastructure Ownership",
+        "ownerName": "System",
+        "rule": "Adversary Owned;Adversary Leased;Adversary Subverted;Unknown;"
+    },
+    {
+        "type": "Regex",
+        "id": 1628,
+        "name": "Last Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "Regex",
+        "id": 2288,
+        "name": "MIME Type",
+        "ownerName": "System",
+        "rule": "[-\\w]+/[-\\w+]+"
+    },
+    {
+        "type": "String",
+        "id": 5,
+        "name": "Network Protocol Analysis",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 17,
+        "name": "Phase of Intrusion",
+        "ownerName": "System",
+        "rule": "Reconnaissance;Weaponization;Delivery;Exploitation;Installation;C2;Actions on Objectives"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Source",
+        "ownerName": "System"
+    },
+    {
+        "type": "DateTime",
+        "id": 21,
+        "name": "Source Date Time",
+        "ownerName": "System",
+        "rule": ""
+    },
+    {
+        "type": "SelectOne",
+        "id": 1514,
+        "name": "URL Type",
+        "ownerName": "System",
+        "rule": "Credential Phishing;Malware Hosting;Drive-by;Web Mailer;Forwarder;Traffic Distribution System;Drop URL;Brand Infringement;Fake AV/Tech Support;Fake Pharma;C2 Callback;"
+    }],
+    "requiredAttributes": ["Description", "First Seen", "Infrastructure Ownership", "Source", "Source Date Time"]
+}, {
+    "type": "emailaddress",
+    "additionalAttributes": [],
+    "wizardAttributes": [
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Additional Analysis and Context",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectOne",
+        "id": 1513,
+        "name": "Collection Location",
+        "ownerName": "System",
+        "rule": "Body;Reply-To;From;Sender;Return-Path;Envelope-from;"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectOne",
+        "id": 20,
+        "name": "EmailAddress Usage",
+        "ownerName": "System",
+        "rule": "Phishing Email Sender;Command and Control;Personal Email Account;Professional Email Account;Domain Registrant;Drop Email;DNS SOA;"
+    },
+    {
+        "type": "Regex",
+        "id": 2318,
+        "name": "First Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "SelectOne",
+        "id": 2,
+        "name": "Infrastructure Ownership",
+        "ownerName": "System",
+        "rule": "Adversary Owned;Adversary Leased;Adversary Subverted;Unknown;"
+    },
+    {
+        "type": "Regex",
+        "id": 1628,
+        "name": "Last Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "String",
+        "id": 5,
+        "name": "Network Protocol Analysis",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 17,
+        "name": "Phase of Intrusion",
+        "ownerName": "System",
+        "rule": "Reconnaissance;Weaponization;Delivery;Exploitation;Installation;C2;Actions on Objectives"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Source",
+        "ownerName": "System"
+    },
+    {
+        "type": "DateTime",
+        "id": 21,
+        "name": "Source Date Time",
+        "ownerName": "System",
+        "rule": ""
+    }],
+    "requiredAttributes": ["Description", "First Seen", "Infrastructure Ownership", "Source", "Source Date Time"]
+}, {
+    "type": "all",
+    "additionalAttributes": [],
+    "wizardAttributes": [
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Additional Analysis and Context",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2281,
+        "name": "Bitcoin Address",
+        "ownerName": "System",
+        "rule": "[13][a-zA-Z0-9]{26,33}"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Description",
+        "ownerName": "System"
+    },
+    {
+        "type": "Regex",
+        "id": 2318,
+        "name": "First Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "SelectOne",
+        "id": 19,
+        "name": "IP and Host Usage",
+        "ownerName": "System",
+        "rule": "C2;Tool Server;Web Hosted Exploit;Remote Exploit;Vulnerability Scan;Exfiltration Point;Adversary Source Host;Phishing Mailserver;Dynamic DNS Host;Sinkhole;Phishing Origin;Phishing Relay;Parking;Malware Hosting;Phishing Site;Other;"
+    },
+    {
+        "type": "SelectOne",
+        "id": 2,
+        "name": "Infrastructure Ownership",
+        "ownerName": "System",
+        "rule": "Adversary Owned;Adversary Leased;Adversary Subverted;Unknown;"
+    },
+    {
+        "type": "Regex",
+        "id": 1628,
+        "name": "Last Seen",
+        "ownerName": "System",
+        "rule": "(?=.{20}$)(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ"
+    },
+    {
+        "type": "Regex",
+        "id": 2288,
+        "name": "MIME Type",
+        "ownerName": "System",
+        "rule": "[-\\w]+/[-\\w+]+"
+    },
+    {
+        "type": "String",
+        "id": 5,
+        "name": "Network Protocol Analysis",
+        "ownerName": "System"
+    },
+    {
+        "type": "SelectRadio",
+        "id": 17,
+        "name": "Phase of Intrusion",
+        "ownerName": "System",
+        "rule": "Reconnaissance;Weaponization;Delivery;Exploitation;Installation;C2;Actions on Objectives"
+    },
+    {
+        "type": "String",
+        "id": 0,
+        "name": "Source",
+        "ownerName": "System"
+    },
+    {
+        "type": "DateTime",
+        "id": 21,
+        "name": "Source Date Time",
+        "ownerName": "System",
+        "rule": ""
+    }],
+    "requiredAttributes": []
+}]

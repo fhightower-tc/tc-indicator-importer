@@ -12,12 +12,12 @@ To install this app in ThreatConnect, use the following commands:
 # clone this repo
 git clone https://github.com/ThreatConnect-Inc/threatconnect-spaces.git
 # move into the directory for this app
-cd threatconnect-spaces/spaces/TCS_-_Indicator_Importer
+cd threatconnect-spaces/spaces/TCS_-_Unstructured_Indicator_Importer
 # package the app
 make pack
 ```
 
-After running these commands, there will be a zip file in the `spaces/TCS_-_Indicator_Importer/` directory which you can install in ThreatConnect.
+After running these commands, there will be a zip file in the `spaces/TCS_-_Unstructured_Indicator_Importer/` directory which you can install in ThreatConnect.
 
 ## Setup
 
@@ -35,7 +35,7 @@ To be able to read content from a URL, you will need to install a playbook with 
 
 ### OCR (optional)
 
-This app is able to submit an image from a website to an OCR engine. To do this, open `TCS_-_Indicator_Importer/TCS_-_Indicator_Importer/ui/js/vueAppManager.js` and edit the `importFromImage` function.
+This app is able to submit an image from a website to an OCR engine. To do this, open `TCS_-_Unstructured_Indicator_Importer/TCS_-_Unstructured_Indicator_Importer/ui/js/vueAppManager.js` and edit the `importFromImage` function.
 
 ## Advanced Usage
 
