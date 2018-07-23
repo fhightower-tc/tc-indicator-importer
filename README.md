@@ -10,9 +10,8 @@ To install this app in ThreatConnect, use the following commands:
 
 ```
 # clone this repo
-git clone https://github.com/ThreatConnect-Inc/threatconnect-spaces.git
-# move into the directory for this app
-cd threatconnect-spaces/spaces/TCS_-_Unstructured_Indicator_Importer
+git clone https://gitlab.com/fhightower-tc/unstructured-indicator-importer.git
+cd unstructured-indicator-importer
 # package the app
 make pack
 ```
@@ -46,3 +45,7 @@ Every time this app is run, it posts content to a [custom metric](https://docs.t
 ### Indicator Profiles
 
 This app provides a functionality I'm calling "Indicator Profiles". It allows you to form a template made up of attributes and tags that can be applied to indicators in bulk. For example, I may want to have a profile for callback URLs that applies the "C2" tag and an "IP and Host Usage" attribute with a value of "C2". If you have questions, raise and issue and I can add more documentation about how to make these.
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and [Floyd Hightower's Spaces App Template](https://gitlab.com/fhightower-templates/threatconnect-js-spaces-template).
