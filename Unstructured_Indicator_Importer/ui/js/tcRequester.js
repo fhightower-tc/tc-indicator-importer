@@ -99,6 +99,7 @@ TCREQUESTER.clearJoyrideCookies = function() {
           .typeName('joyride-' + i)
           .command('1')
           .done(function(response) {
+              window.location.reload();
           })
           .error(function(response) {
               $.jGrowl("Unable to store joyride 'cookie' in the datastore.", { group: 'warning-growl' });
