@@ -457,7 +457,6 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
             var api_url;
             $.jGrowl('Submitting image for OCR analysis', {group: 'success-growl'});
 
-            // TODO: add urls that submit images for OCR analysis below (2)
             if (_this.ocrAsSubtitle) {
                 api_url = "";
             } else {
