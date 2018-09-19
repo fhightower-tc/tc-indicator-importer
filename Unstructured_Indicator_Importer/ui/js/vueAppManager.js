@@ -410,7 +410,6 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
             // submit the PDF to the playbook
             var sp = TCREQUESTER.tc.secureProxy();
             sp.method('POST')
-                // TODO: make the link to the playbook a parameter (1)
                 .url(_this.importFromPDFPlaybookLink)
                 .body(JSON.stringify({"url": _this.importPDF}))
                 .contentType('application/json; charset=utf-8')
@@ -438,7 +437,6 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
             // submit the PDF to the playbook
             var sp = TCREQUESTER.tc.secureProxy();
             sp.method('POST')
-                // TODO: make the link to the playbook a parameter (1)
                 .url(_this.importFromURLPlaybookLink)
                 .body(_this.importURL)
                 .contentType('text/plain; charset=utf-8')
@@ -459,7 +457,7 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
             var api_url;
             $.jGrowl('Submitting image for OCR analysis', {group: 'success-growl'});
 
-            // TODO: add urls that submit images for OCR analysis below
+            // TODO: add urls that submit images for OCR analysis below (2)
             if (_this.ocrAsSubtitle) {
                 api_url = "";
             } else {

@@ -147,15 +147,17 @@ $(document).on('open.zf.reveal', '[data-reveal]', function() {
         VUEAPPMANAGER.modalVue.updateCurrentAttributes();
     } catch(err) {}
 
-    // show a warning if there are no selected indicators
-    var selectedIndicators = VUEAPPMANAGER.phaseTwoVue.getSelectedIndicatorsFromBlock();
-    if (selectedIndicators == null) {
-        $.jGrowl("No indicators selected. Select some indicators and then come back.", { group: 'warning-growl'});
-    }
+    try {
+        // show a warning if there are no selected indicators
+        var selectedIndicators = VUEAPPMANAGER.phaseTwoVue.getSelectedIndicatorsFromBlock();
+        if (selectedIndicators == null) {
+            $.jGrowl("No indicators selected. Select some indicators and then come back.", { group: 'warning-growl'});
+        }
 
-    // reset the status of the status button for this modal
-    $(this).find('button').removeClass('alert');
-    $(this).find('button').removeClass('success');
+        // reset the status of the status button for this modal
+        $(this).find('button').removeClass('alert');
+        $(this).find('button').removeClass('success');
+    } catch(err) {}
 });
 
 $(document).on('closed.zf.reveal', '[data-reveal]', function() {

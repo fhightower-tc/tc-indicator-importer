@@ -379,14 +379,18 @@
                         <i>Upload files (yes, you can upload multiple files!) to import their content</i>
                         <input type="file" id="import-local" multiple onchange="VUEAPPMANAGER.phaseZeroVue.importFromLocalFile(this.files)">
 
-                        <h3>Import PDF</h3>
-                        <input type="text" name="pdf" placeholder="Enter the URL of a PDF article" autocomplete="off" v-model="importPDF">
-                        <!-- <label class="float-right"><input type="checkbox" v-model="saveDocument">Save PDF as Document</label> -->
-                        <button id="import-pdf" class="button secondary" style="display: inline;" v-on:click="importFromPDF">Import from PDF</button>
+                        <div v-if="importFromPDFPlaybookLink">
+                            <h3>Import PDF</h3>
+                            <input type="text" name="pdf" placeholder="Enter the URL of a PDF article" autocomplete="off" v-model="importPDF">
+                            <!-- <label class="float-right"><input type="checkbox" v-model="saveDocument">Save PDF as Document</label> -->
+                            <button id="import-pdf" class="button secondary" style="display: inline;" v-on:click="importFromPDF">Import from PDF</button>
+                        </div>
 
-                        <h3>Import from URL</h3>
-                        <input type="text" name="url" placeholder="Enter a URL" autocomplete="off" v-model="importURL">
-                        <button id="import-url" class="button secondary" style="display: inline;" v-on:click="importFromURL">Import from URL</button>
+                        <div v-if="importFromURLPlaybookLink">
+                            <h3>Import from URL</h3>
+                            <input type="text" name="url" placeholder="Enter a URL" autocomplete="off" v-model="importURL">
+                            <button id="import-url" class="button secondary" style="display: inline;" v-on:click="importFromURL">Import from URL</button>
+                        </div>
 
                         <h3>Import from Image (OCR)</h3>
                         <input type="text" name="image" placeholder="Enter the URL to an image" autocomplete="off" v-model="importImage">
