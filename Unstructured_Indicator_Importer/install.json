@@ -18,6 +18,11 @@
         "type": "String",
         "default": ""
     }, {
+        "name": "ocrPlaybookLink",
+        "label": "Link to OCR Playbook",
+        "type": "String",
+        "default": ""
+    }, {
         "name": "vtAPIKey",
         "label": "VT API Key (Public or Private)",
         "encrypt": true,

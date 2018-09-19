@@ -388,7 +388,7 @@
                             <button id="import-pdf" class="button secondary" style="display: inline;" v-on:click="importFromPDF">Import from PDF</button>
                         </div>
                         <div v-if="!importFromPDFPlaybookLink">
-                            When configured properly, you can <b>import content from a PDF</b> hosted online. You can read more <a target="_blank" href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer#pdf-reader-playbook-optional">here</a>.
+                            When configured, you can <b>import content from a PDF</b> hosted online. You can read more <a target="_blank" href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer#pdf-reader-playbook-optional">here</a>.
                         </div>
 
                         <hr>
@@ -399,15 +399,19 @@
                             <button id="import-url" class="button secondary" style="display: inline;" v-on:click="importFromURL">Import from URL</button>
                         </div>
                         <div v-if="!importFromURLPlaybookLink">
-                            When configured properly, you can <b>import content from a URL</b>. You can read more <a target="_blank" href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer#url-reader-playbook-optional">here</a>.
+                            When configured, you can <b>import content from a URL</b>. You can read more <a target="_blank" href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer#url-reader-playbook-optional">here</a>.
                         </div>
 
                         <hr>
 
-                        <h3>Import from Image (OCR)</h3>
-                        <input type="text" name="image" placeholder="Enter the URL to an image" autocomplete="off" v-model="importImage">
-                        <label class="float-right"><input type="checkbox" v-model="ocrAsSubtitle">Parse as Subtitle</label>
-                        <button id="import-image" class="button secondary" style="display: inline;" v-on:click="importFromImage">Submit image for OCR analysis</button>
+                        <div v-if="importFromOCRPlaybookLink">
+                            <h3>Import from Image (OCR)</h3>
+                            <input type="text" name="image" placeholder="Enter the URL to an image" autocomplete="off" v-model="importImage">
+                            <button id="import-image" class="button secondary" style="display: inline;" v-on:click="importFromOCR">Submit image for OCR analysis</button>
+                        </div>
+                        <div v-if="!importFromOCRPlaybookLink">
+                            When configured, you can <b>run OCR on an image</b> hosted online. You can read more <a target="_blank" href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer#ocr-reader-playbook-optional">here</a>.
+                        </div>
                     </div>
                 </div>
 

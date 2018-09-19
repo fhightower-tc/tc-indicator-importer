@@ -26,15 +26,15 @@ This app pulls attributes from the datastore. Thus, you will need to write a lis
 
 ### PDF Reader Playbook (optional)
 
-To be able to import content from a pdf online, you will need to install a playbook with an http link trigger app that makes a request to the given site, reads the contents as a PDF, and returns the text. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/pdf-reader). Once you have installed the playbook, you also need to add the link to the playbook's http link trigger into this app's `install.json` as the `pdfReaderPlaybookLink` field.
+To be able to import content from a PDF online, you will need to install a playbook with an HTTP link trigger app that makes a request to the given site, reads the contents as a PDF, and returns the text. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/pdf-reader). Once you have installed the playbook, you also need to add the link to the playbook's HTTP link trigger into this app's configuration in the field labeled "Link to PDF Reader Playbook".
 
 ### URL Reader Playbook (optional)
 
-To be able to import content from a URL, you will need to install a playbook with the [HTML Text Parser](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/apps/TCPB_-_HTML_Text_Parser) playbook app. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/url-reader). Once you have installed the playbook, you also need to add the link to the playbook's http link trigger into this app's `install.json` as the `urlReaderPlaybookLink` field.
+To be able to import content from a URL, you will need to install a playbook with the [HTML Text Parser](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/apps/TCPB_-_HTML_Text_Parser) playbook app. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/url-reader). Once you have installed the playbook, you also need to add the link to the playbook's HTTP link trigger into this app's configuration in the field labeled "Link to URL Reader Playbook".
 
-### OCR (optional)
+### OCR Reader Playbook (optional)
 
-This app is able to submit an image from a website to an OCR engine. To do this, open `TCS_-_Unstructured_Indicator_Importer/TCS_-_Unstructured_Indicator_Importer/ui/js/vueAppManager.js` and edit the `importFromImage` function.
+To be able to import content from an image online using [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition), you will need to install a playbook with an HTTP link trigger app that makes a request to the given site, runs OCR on the image, and returns the text. Once you have installed such a playbook, you also need to add the link to the playbook's HTTP link trigger into this app's configuration in the field labeled "Link to OCR Playbook".
 
 ## Advanced Usage
 

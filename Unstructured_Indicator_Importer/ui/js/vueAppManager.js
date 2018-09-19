@@ -229,7 +229,6 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
         importPDF: "",
         importURL: "",
         importImage: "",
-        ocrAsSubtitle: false,
         saveDocument: false,
         selectedOwner: "",
         recentGroups: [],
@@ -245,6 +244,9 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
         },
         importFromURLPlaybookLink: function() {
             return getParameterByName("urlReaderPlaybookLink");
+        },
+        importFromOCRPlaybookLink: function() {
+            return getParameterByName("ocrPlaybookLink");
         },
         customMetricOwner: function() {
             return getParameterByName("customMetricOwner");
@@ -434,11 +436,10 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
             var _this = this;
             $.jGrowl('Gathering content...', {group: 'success-growl'});
 
-            // submit the PDF to the playbook
             var sp = TCREQUESTER.tc.secureProxy();
             sp.method('POST')
                 .url(_this.importFromURLPlaybookLink)
-                .body(_this.importURL)
+                .body(_this.importImage)
                 .contentType('text/plain; charset=utf-8')
                 .done(function(response) {
                     $.jGrowl('URL content imported', {group: 'success-growl'});
@@ -451,31 +452,24 @@ VUEAPPMANAGER.phaseZeroVue = new Vue({
                 })
                 .post();
         },
-        importFromImage: function() {
-            /* Submit an image to the OCR API. */
+        importFromOCR: function() {
+            /* Submit the given URL to a playbook which will run OCR on it. */
             var _this = this;
-            var api_url;
-            $.jGrowl('Submitting image for OCR analysis', {group: 'success-growl'});
-
-            if (_this.ocrAsSubtitle) {
-                api_url = "";
-            } else {
-                api_url = "";
-            }
+            $.jGrowl('Gathering content...', {group: 'success-growl'});
 
             var sp = TCREQUESTER.tc.secureProxy();
             sp.method('POST')
-                // TODO: make the link to the playbook a parameter (1)
-                .url(api_url + _this.importImage)
+                .url(_this.importFromOCRPlaybookLink)
+                .body(_this.importURL)
+                .contentType('text/plain; charset=utf-8')
                 .done(function(response) {
-                    $.jGrowl('Image content imported', {group: 'success-growl'});
-                    console.log("response", response);
-                    // add the text from the image to the main import area
-                    $('#indicator-textarea').val($('#indicator-textarea').val() + '\n' + response.text_block[0].text);
+                    $.jGrowl('OCR content imported', {group: 'success-growl'});
+                    // move the content from the response into the main import area
+                    $('#indicator-textarea').val($('#indicator-textarea').val() + '\n' + response);
                 })
                 .error(function(response) {
                     console.error('error response', response);
-                    $.jGrowl('Error submitting image to OCR api: ' + response.error, {group: 'failure-growl'});
+                    $.jGrowl('Error retrieving OCR content: ' + response.error, {group: 'failure-growl'});
                 })
                 .post();
         },
