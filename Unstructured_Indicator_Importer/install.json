@@ -11,17 +11,20 @@
         "name": "pdfReaderPlaybookLink",
         "label": "Link to PDF Reader Playbook",
         "type": "String",
-        "default": ""
+        "default": "",
+        "validValues": ["${USER:TEXT}", "${ORGANIZATION:TEXT}"]
     }, {
         "name": "urlReaderPlaybookLink",
         "label": "Link to URL Reader Playbook",
         "type": "String",
-        "default": ""
+        "default": "",
+        "validValues": ["${USER:TEXT}", "${ORGANIZATION:TEXT}"]
     }, {
         "name": "ocrPlaybookLink",
         "label": "Link to OCR Playbook",
         "type": "String",
-        "default": ""
+        "default": "",
+        "validValues": ["${USER:TEXT}", "${ORGANIZATION:TEXT}"]
     }, {
         "name": "vtAPIKey",
         "label": "VT API Key (Public or Private)",
