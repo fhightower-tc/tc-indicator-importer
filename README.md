@@ -26,11 +26,11 @@ This app pulls attributes from the datastore. Thus, you will need to write a lis
 
 ### PDF Reader Playbook (optional)
 
-To be able to read content from a pdf online, you will need to install a playbook with an http link trigger app that makes a request to the given site, reads the contents as a PDF, and returns the text. This playbook will be uploaded to the [ThreatConnect playbooks repository](https://github.com/ThreatConnect-Inc/threatconnect-playbooks) soon. Once you have installed the playbook, you also need to add the link to the playbook's http link trigger into this app's `install.json` as the `pdfReaderPlaybookLink` field.
+To be able to import content from a pdf online, you will need to install a playbook with an http link trigger app that makes a request to the given site, reads the contents as a PDF, and returns the text. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/pdf-reader). Once you have installed the playbook, you also need to add the link to the playbook's http link trigger into this app's `install.json` as the `pdfReaderPlaybookLink` field.
 
 ### URL Reader Playbook (optional)
 
-To be able to read content from a URL, you will need to install a playbook with the [HTML Text Parser](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/apps/TCPB_-_HTML_Text_Parser) playbook app. This playbook will be uploaded to the [ThreatConnect playbooks repository](https://github.com/ThreatConnect-Inc/threatconnect-playbooks) soon. Once you have installed the playbook, you also need to add the link to the playbook's http link trigger into this app's `install.json` as the `urlReaderPlaybookLink` field.
+To be able to import content from a URL, you will need to install a playbook with the [HTML Text Parser](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/apps/TCPB_-_HTML_Text_Parser) playbook app. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/url-reader). Once you have installed the playbook, you also need to add the link to the playbook's http link trigger into this app's `install.json` as the `urlReaderPlaybookLink` field.
 
 ### OCR (optional)
 
