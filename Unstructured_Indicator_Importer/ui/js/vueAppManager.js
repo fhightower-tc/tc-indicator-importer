@@ -725,20 +725,8 @@ VUEAPPMANAGER.startPhaseOne = function() {
                     selectedNonCompleteFiles.forEach(function(selectedFile) {
                         thisVue.hashes[selectedFile.indicatorType.split("-")[1]].push(selectedFile.indicator);
                     });
-                }
-                // otherwise, enrich all of the files
-                else {
-                    // TODO: test to see if this works... (I'm pulling from the VUE app rather than the dom)
-                    thisVue.indicators.forEach(function(indicator) {
-                        if (!indicator.exists) {
-                            var indicatorType = indicator.type;
-
-                            // get a list of all file hashes (excluding complete files)
-                            if (indicatorType.split("-")[0] === 'file' && indicatorType !== 'file-complete') {
-                                thisVue.hashes[indicatorType.split("-")[1]].push(indicator.indicator);
-                            }
-                        }
-                    });
+                } else {
+                    $.jGrowl('Please select some files to consolidate using VT', {group: 'warning-growl'});
                 }
 
                 // turn the button into a spinner

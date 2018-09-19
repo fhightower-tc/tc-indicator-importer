@@ -473,12 +473,12 @@
             <div class="tabs-content well" data-tabs-content="phase-one-tabs">
                 <div class="tabs-panel is-active" id="nonexist-indicators">
                     <span id="nonexist-create-indicator-joyride-target"></span>
-                    <a href="#0" class="secondary button" v-on:click="createIndicators"><span id="top-create-button">Create indicators</span></a>
+                    <a href="#0" class="secondary button" v-on:click="createIndicators" title="Create the selected indicators in ThreatConnect"><span id="top-create-button">Create indicators</span></a>
                     <!-- TODO: change the name "data-addCart" and the classname "button-add-cart" of the element below (and the button on the bottom)-->
                     <span id="nonexist-vt-enrich-joyride-target"></span>
-                    <button data-addCart class="secondary button button-add-cart" v-on:click="gatherFileHashes"><span id="top-enrich-button">Enrich file hashes (uses VT)</span></button>
+                    <button data-addCart class="secondary button button-add-cart" v-on:click="gatherFileHashes" title="Consolidate the selected file hashes using VT (this pulls additional hashes for individual file hashes if the file exists in VT)"><span id="top-enrich-button">Enrich file hashes (uses VT)</span></button>
                     <span id="nonexist-hash-merge-joyride-target"></span>
-                    <a href="#0" class="secondary button" v-on:click="manualMerge"><span id="top-merge-button">Manually merge file hashes</span></a>
+                    <a href="#0" class="secondary button" v-on:click="manualMerge" title="Merge the selected file hashes of different types (md5, sha1, or sha256) into one file indicator"><span id="top-merge-button">Manually merge file hashes</span></a>
                     <a href="#0" id="phase-one-next-button" class="button" onclick="UIQB.confirmPhaseTwoStart();"> <strong>Next &nbsp&nbsp></strong></a>
 
                     <div class="small-3 medium-3 large-3">
@@ -507,9 +507,9 @@
                         <listed-indicator v-for="indicator in indicators" v-bind:indicator="indicator" :key="indicator.indicator"></listed-indicator>
                     </div>
 
-                    <a href="#0" class="secondary button" v-on:click="createIndicators">Create indicators</a>
-                    <button data-addCart class="secondary button button-add-cart" v-on:click="gatherFileHashes"><span>Enrich file hashes (uses VT)</span></button>
-                    <a href="#0" class="secondary button" v-on:click="manualMerge">Manually merge file hashes</a>
+                    <a href="#0" class="secondary button" v-on:click="createIndicators" title="Create the selected indicators in ThreatConnect">Create indicators</a>
+                    <button data-addCart class="secondary button button-add-cart" v-on:click="gatherFileHashes" title="Consolidate the selected file hashes using VT (this pulls additional hashes for individual file hashes if the file exists in VT)"><span>Enrich file hashes (uses VT)</span></button>
+                    <a href="#0" class="secondary button" v-on:click="manualMerge" title="Merge the selected file hashes of different types (md5, sha1, or sha256) into one file indicator">Manually merge file hashes</a>
                     <a href="#0" class="button" onclick="UIQB.confirmPhaseTwoStart();"> <strong>Next &nbsp&nbsp></strong></a>
                 </div>
                 <div class="tabs-panel well" id="exist-indicators">

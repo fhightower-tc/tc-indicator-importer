@@ -112,7 +112,7 @@ INDICATORIMPORTERUTILITY.queryVT = function(fileHash) {
                 }
             })
             .error(function(response) {
-                $.jGrowl("Error merging files from VT: " + response.error + ". Make sure you have added your VT API key in the config for this app.", { group: 'failure-growl'});
+                $.jGrowl("Error merging files from VT: " + response.error + " Make sure you have added your VT API key in the config for this app.", { group: 'failure-growl'});
                 VUEAPPMANAGER.phaseOneVue.vtQueryCallback();
                 $('[data-addCart]').removeClass('is-adding');
             })
