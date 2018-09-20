@@ -131,7 +131,7 @@
                         <h6><b>Common Attributes</b></h6>
 
                         <ul>
-                            <li v-for="attribute in wizardAttributes" v-on:mousedown="selectedAttributeType = attribute.name"><a><b>{{ attribute.name.substr(0) }}</b>{{ attribute.name.substr(1) }}</a></li>
+                            <li v-for="attribute in wizardAttributes" v-on:mousedown="selectedAttributeType = attribute.name"><a><b>{{ attribute.name.substr(0, 1) }}</b>{{ attribute.name.substr(1) }}</a></li>
                         </ul>
 
                         <hr>

@@ -22,7 +22,13 @@ After running these commands, there will be a zip file in the `spaces/TCS_-_Unst
 
 ### Attributes in Datastore (required)
 
-This app pulls attributes from the datastore. Thus, you will need to write a list of attributes like the one in the `example_datastore_attributes.json` file.
+This app pulls attributes from the datastore. Thus, you will need to write a list of attributes like the one in the `example_datastore_attributes.json` to the datastore. This attributes json needs to be added in the following datastore:
+
+```
+/v2/exchange/db/organization/app-data/attributes
+
+{"text": "[...<ATTRIBUTES HERE>...]"}
+```
 
 ### PDF Reader Playbook (optional)
 

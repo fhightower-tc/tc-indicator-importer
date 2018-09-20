@@ -96,10 +96,12 @@ INDICATORBLOCK.prototype.getBlockElement = function(indicatorType, indicatorCoun
     newBlockElement.setAttribute("id", blockID);
     newBlockElement.setAttribute("class", "card indicator-block small-10 medium-10 large-10");
     newBlockElement.setAttribute("v-on:click", "setCurrentIndicatorContext");
+    newBlockElement.setAttribute("style", "border: 1px solid #333;");
 
     var blockElementOptions = document.createElement("div");
     blockElementOptions.setAttribute("id", blockID + "-options");
     blockElementOptions.setAttribute("class", "card-divider");
+    blockElementOptions.setAttribute("style", "background-color: #333; color: white;");
     blockElementOptions.innerHTML = "<span class='indicator-block-start'></span><h3 class='indicator-block-title'>" + indicatorType.toUpperCase() + " <span class='secondary badge'>" + indicatorCount + "</span></h3><div id='button-panel' class='float-left'> " +
         "<a class='secondary button' href='#0' data-open='association-modal'>Associations</a> " +
         "<a class='secondary button' href='#0' data-open='attribute-modal'>Attributes</a> " +
