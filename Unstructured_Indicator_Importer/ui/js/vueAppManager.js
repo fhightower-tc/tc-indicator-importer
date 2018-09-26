@@ -1188,7 +1188,11 @@ VUEAPPMANAGER.startPhaseTwo = function() {
             },
             showIndicatorBlocks: function() {
                 /* Show indicator blocks for the indicators of each time. This copies all of the existing indicators from phase one to phase two. */
-                // split the indicators up by indicator type
+                this.indicatorBlocks = [];
+                // remove all of the previous indicator blocks from the html
+                $('.indicator-block').each(function() {
+                    $(this)[0].remove();
+                });
                 var sortedIndicators = {};
                 var indicatorCount = 0;
 

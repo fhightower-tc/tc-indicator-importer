@@ -159,6 +159,6 @@ INDICATORBLOCK.prototype.getBlockElement = function(indicatorType, indicatorCoun
     newBlockElement.appendChild(blockElementOptions);
     newBlockElement.appendChild(indicatorCheckBoxGroup);
 
-    $('body').append(newBlockElement);
+    $('#phase-two').append(newBlockElement);
     return blockID;
 };

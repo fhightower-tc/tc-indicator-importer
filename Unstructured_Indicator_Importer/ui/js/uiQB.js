@@ -1,5 +1,7 @@
 var UIQB = UIQB || {};
 
+UIQB.reversed = false;
+
 UIQB.startApp = function() {
     $('#phase-one').hide();
 
@@ -49,14 +51,21 @@ UIQB.confirmPhaseOneStart = function() {
     }
 };
 
-UIQB.startPhaseOne = function() {
+UIQB.startPhaseOne = function(returning=false) {
+    $('#phase-zero').show();
+    $('#phase-two').hide();
+
     // show the loading screen
     VUEAPPMANAGER.phaseZeroVue.loadingPhaseOne = true;
 
-    // start the suggestion engines and vue apps
-    VUEAPPMANAGER.startPhaseOne();
-    INDICATORIMPORTER.parseIndicators();
-    SUGGESTIONENGINE.initializePhaseTwoSuggestions();
+    if (!returning) {
+        // start the suggestion engines and vue apps
+        VUEAPPMANAGER.startPhaseOne();
+        INDICATORIMPORTER.parseIndicators();
+        SUGGESTIONENGINE.initializePhaseTwoSuggestions();
+    } else {
+        UIQB.reversed = true;
+    }
 
     window.setTimeout(function() {
         VUEAPPMANAGER.phaseZeroVue.loadingSuffix += ".";
@@ -74,17 +83,26 @@ UIQB.startPhaseOne = function() {
         VUEAPPMANAGER.phaseZeroVue.loadingSuffix += ".";
     }, 7000);
 
-    // set a timeout which will eventually show the UI for phase one
-    window.setTimeout(function() {
+    if (returning) {
         $('#phase-zero').hide();
         $('#phase-one').show();
         // start foundation for phase one (to handle the tabs)
         $('#phase-one').foundation();
         // destroy all previous joyrides
         jQuery(window).joyride("destroy");
-        // check to see if the joyride for this phase has been run
-        TCREQUESTER.joyrideComplete(1);
-    }, 8000);
+    } else {
+        // set a timeout which will eventually show the UI for phase one
+        window.setTimeout(function() {
+            $('#phase-zero').hide();
+            $('#phase-one').show();
+            // start foundation for phase one (to handle the tabs)
+            $('#phase-one').foundation();
+            // destroy all previous joyrides
+            jQuery(window).joyride("destroy");
+            // check to see if the joyride for this phase has been run
+            TCREQUESTER.joyrideComplete(1);
+        }, 8000);
+    }
 };
 
 UIQB.confirmPhaseTwoStart = function() {
@@ -111,12 +129,19 @@ UIQB.confirmPhaseTwoStart = function() {
 UIQB.startPhaseTwo = function() {
     $('#phase-one').hide();
     $('#phase-two').show();
-    VUEAPPMANAGER.startPhaseTwo();
-    SUGGESTIONENGINE.startPhaseTwoSuggestions();
-    // get the profiles from the datastore
-    TCREQUESTER.getProfilesFromDatastore();
-    // get the attributes from the datastore
-    TCREQUESTER.getAttributesFromDatastore();
+
+    // if we are passing through this function for the first time, make the preparations for phase two
+    if (!UIQB.reversed) {
+        VUEAPPMANAGER.startPhaseTwo();
+        SUGGESTIONENGINE.startPhaseTwoSuggestions();
+        // get the profiles from the datastore
+        TCREQUESTER.getProfilesFromDatastore();
+        // get the attributes from the datastore
+        TCREQUESTER.getAttributesFromDatastore();
+    } else {
+        // if we have already been on the second phase and have gone backwards one of the steps, no need to restart the phaseTwoVue... just draw the blocks
+        VUEAPPMANAGER.phaseTwoVue.showIndicatorBlocks();
+    }
 
     // destroy all previous joyrides
     jQuery(window).joyride("destroy");
