@@ -447,6 +447,7 @@
                 <br><br>
 
                 <p>If you would like to learn how to use this app, <a href="#0" onclick="TCREQUESTER.clearJoyrideCookies();">click here</a> to take the tour (this will refresh the app).</p>
+                <p><a data-open="creditsModal">App credits</a></p>
             </div>
 
             <div v-if="loadingPhaseOne">
@@ -642,6 +643,14 @@
         </ol>
 
     </div>  <!-- end bulk-indicator-app -->
+
+    <!-- This contains the credits for this app -->
+    <div class="reveal" id="creditsModal" data-reveal>
+      <h1>Credits</h1>
+      <p>This app was created by <a href="https://hightower.space/" target="_blank">Floyd Hightower</a>. The source code for this app is available <a href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer" target="_blank">here</a>.</p>
+      <p>If you have any feedback, feel free to <a href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer/issues" target="_blank">raise an issue</a> or <a href="https://hightower.space/contact/" target="_blank">send Floyd feedback</a>.</p>
+      <p>If you enjoy the app, please <a href="https://saythanks.io/to/fhightower" target="_blank">say thank you</a>! It's very encouraging to know people are using this app!</p>
+    </div>
 
     <!-- Scripts for the indicator importer -->
     <script type="text/javascript" src="./js/indicatorImporter.js"></script>
