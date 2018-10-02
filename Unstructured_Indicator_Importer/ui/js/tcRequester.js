@@ -24,7 +24,7 @@ TCREQUESTER.getAttributesFromDatastore = function() {
             VUEAPPMANAGER.modalVue.attributes = JSON.parse(response._source.text);
         })
         .error(function(response) {
-            $.jGrowl("Unable to pull attributes from the datastore.", { group: 'warning-growl' });
+            $.jGrowl("Unable to pull attributes from the datastore.", { group: 'failure-growl' });
             console.error('error response', response);
         })
         .request();
