@@ -50,6 +50,11 @@ var TYPE = {
         'type': 'EmailAddress',
         'uri': 'indicators/emailAddresses',
     },
+    EVENT: {
+        'dataField': 'event',
+        'type': 'Event',
+        'uri': 'groups/events',
+    },
     FILE: {
         'dataField': 'file',
         'postField': '',
@@ -80,6 +85,11 @@ var TYPE = {
         'indicatorFields': ['summary'],
         'uri': 'indicators',
     },
+    INTRUSION_SET: {
+        'dataField': 'intrusionSet',
+        'type': 'IntrusionSet',
+        'uri': 'groups/intrusionSets',
+    },
     MD5: {
         'dataField': 'file',
         'postField': 'md5',
@@ -90,6 +100,11 @@ var TYPE = {
         'dataField': undefined,
         'type': 'Owner',
         'uri': 'owners',
+    },
+    REPORT: {
+        'dataField': 'report',
+        'type': 'Report',
+        'uri': 'groups/reports',
     },
     SHA1: {
         'dataField': 'file',
@@ -186,7 +201,10 @@ var groupHelper = function(type) {
         'campaign': TYPE.CAMPAIGN,
         'document': TYPE.DOCUMENT,
         'email': TYPE.EMAIL,
+        'event': TYPE.EVENT,
         'incident': TYPE.INCIDENT,
+        'intrusion set': TYPE.INTRUSION_SET,
+        'report': TYPE.REPORT,
         'signature': TYPE.SIGNATURE,
         'threat': TYPE.THREAT
     };
@@ -866,7 +884,10 @@ function Groups(authentication) {
             campaign: {},
             document: {},
             email: {},
+            event: {},
             incident: {},
+            intrusionSet: {},
+            report: {},
             signature: {},
             threat: {}
         },
@@ -4298,8 +4319,11 @@ var normalize = {
             case TYPE.CAMPAIGN.type:
             case TYPE.DOCUMENT.type:
             case TYPE.EMAIL.type:
+            case TYPE.EVENT.type:
             case TYPE.GROUP.type:
             case TYPE.INCIDENT.type:
+            case TYPE.INTRUSION_SET.type:
+            case TYPE.REPORT.type:
             case TYPE.SIGNATURE.type:
             case TYPE.THREAT.type:
                 return this.groups;
