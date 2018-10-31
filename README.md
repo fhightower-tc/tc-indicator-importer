@@ -30,6 +30,8 @@ This app pulls attributes from the datastore. Thus, you will need to write a lis
 {"text": "[...<ATTRIBUTES HERE>...]"}
 ```
 
+There is a playbook to do this [here](https://tc.hightower.space/post/playbooks/store-attributes-in-datastore-for-unstructured-importer/).
+
 ### PDF Reader Playbook (optional)
 
 To be able to import content from a PDF online, you will need to install a playbook with an HTTP link trigger app that makes a request to the given site, reads the contents as a PDF, and returns the text. This playbook is available [here](https://github.com/ThreatConnect-Inc/threatconnect-playbooks/tree/master/playbooks/pdf-reader). Once you have installed the playbook, you also need to add the link to the playbook's HTTP link trigger into this app's configuration in the field labeled "Link to PDF Reader Playbook".
