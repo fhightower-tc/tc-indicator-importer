@@ -75,6 +75,7 @@ Vue.component('profile', {
 VUEAPPMANAGER.modalVue = new Vue({
     el: '#modals',
     data: {
+        playbookTrigger: '',
         addedTags: [],
         profiles: [],
         securityLabels: [],
@@ -954,12 +955,34 @@ VUEAPPMANAGER.startPhaseTwo = function() {
 
                 return userInput;
             },
+            triggerPlaybook: function(profileModalStatusElement) {
+                /* Send each of the selected items to a playbook. */
+                // check to see if any indicators are selected
+                var selectedIndicators = VUEAPPMANAGER.phaseTwoVue.getSelectedIndicatorsFromBlock();
+
+                // if there are no selected indicators, stop
+                if (selectedIndicators == null) {
+                    $.jGrowl("No Indicators selected...\nGo select some indicators and then trigger the playbook.", { group: 'failure-growl'});
+                    return null;
+                }
+
+                if (VUEAPPMANAGER.modalVue.playbookTrigger !== '') {
+                    for (var i = selectedIndicators.length - 1; i >= 0; i--) {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", VUEAPPMANAGER.modalVue.playbookTrigger, true);
+                        //Send the proper header information along with the request
+                        xhr.setRequestHeader("Content-Type", "text/plain; charset=utf-8");
+                        xhr.send(selectedIndicators[i].indicator);
+                        INDICATORIMPORTERUTILITY.handleStatusBadge(profileModalStatusElement, "success");
+                    }
+                }
+            },
             applyProfiles: function(profileModalStatusElement) {
                 /* Apply selected profiles to the indicators. */
                 // check to see if any indicators are selected
                 var selectedIndicators = VUEAPPMANAGER.phaseTwoVue.getSelectedIndicatorsFromBlock();
 
-                // if there are no selected indicators, stop adding tags
+                // if there are no selected indicators, stop
                 if (selectedIndicators == null) {
                     $.jGrowl("No Indicators selected...\nGo select some indicators and apply profiles.", { group: 'failure-growl'});
                     return null;

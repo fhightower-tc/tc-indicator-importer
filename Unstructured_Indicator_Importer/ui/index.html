@@ -268,6 +268,18 @@
                 </div>
             </div>
 
+            <div class="reveal resized-modal" id="playbook-modal" data-reveal>
+                <h2>Send the Selected Items to a Playbook</h2>
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <label>Playbook URL:</label>
+                <input type='text' placeholder='Paste the url to a playbook...' title='Paste the url to a playbook trigger' autocomplete='off' spellcheck='false' v-model="playbookTrigger"/>
+
+                <button id="playbook-modal-status" type="button" class="button" onclick="VUEAPPMANAGER.phaseTwoVue.triggerPlaybook('#playbook-modal-status')">Trigger the Playbook!</button>
+            </div>
+
             <div class="reveal resized-modal" id="profile-modal" data-reveal>
                 <h2>Apply a Profile</h2>
                 <button class="close-button" data-close aria-label="Close reveal" type="button">
@@ -580,6 +592,7 @@
                 <a class='secondary button' href='#0' data-open='sec-label-modal'>Security Labels</a>
                 <a class='secondary button' href='#0' data-open='tag-modal'>Tags</a>
                 <a class='secondary button' href='#0' data-open='profile-modal' title='Apply a profile to the selected indicators'>Profiles</a>
+                <a class='secondary button' href='#0' data-open='playbook-modal' title='Send each of the selected items to a playbook'>Trigger Playbook</a>
                 <button class='button' data-open='danger-zone' title='Here be dragons' style='background-color: #646469;'>Danger Zone</button>
 
                 <div class="small-6 medium-5 large-5 float-right">

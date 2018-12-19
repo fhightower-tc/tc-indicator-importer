@@ -108,7 +108,8 @@ INDICATORBLOCK.prototype.getBlockElement = function(indicatorType, indicatorCoun
         "<a class='secondary button' href='#0' data-open='rating-modal'>Ratings</a> " +
         "<a class='secondary button' href='#0' data-open='sec-label-modal'>Security Labels</a> " +
         "<a class='secondary button' href='#0' data-open='tag-modal'>Tags</a> " +
-        "<a class='secondary button' href='#0' data-open='profile-modal' title='Apply a profile to the selected indicators'>Profiles</a> ";
+        "<a class='secondary button' href='#0' data-open='profile-modal' title='Apply a profile to the selected indicators'>Profiles</a> " +
+        "<a class='secondary button' href='#0' data-open='playbook-modal' title='Send each of the selected items to a playbook'>Trigger Playbook</a> ";
 
     // add a file action button
     if (indicatorType !== "emailaddress") {
