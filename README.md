@@ -22,10 +22,10 @@ After running these commands, there will be a zip file named `TCS_-_Unstructured
 
 ### Attributes in Datastore (required)
 
-This app pulls attributes from the datastore. Thus, you will need to write a list of attributes like the one in the `example_datastore_attributes.json` to the datastore. This attributes json needs to be added in the following datastore:
+The unstructured indicator importer spaces app pulls attributes from the datastore. Thus, you will need to write a list of attributes like the one in [example_datastore_attributes.json](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/blob/master/example_datastore_attributes.json) to the datastore. This attributes json needs to be added in the following datastore:
 
 ```
-/v2/exchange/db/organization/app-data/attributes
+/organization/app-data/attributes
 
 {"text": "[...<ATTRIBUTES HERE>...]"}
 ```
