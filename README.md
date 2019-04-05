@@ -16,7 +16,7 @@ cd unstructured-indicator-importer
 make pack
 ```
 
-After running these commands, there will be a zip file in the `spaces/TCS_-_Unstructured_Indicator_Importer/` directory which you can install in ThreatConnect.
+After running these commands, there will be a zip file named `TCS_-_Unstructured_Indicator_Importer.zip` in the top directory of the app which you can install in ThreatConnect.
 
 ## Setup
 
