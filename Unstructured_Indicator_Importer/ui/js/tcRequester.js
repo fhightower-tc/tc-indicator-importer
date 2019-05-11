@@ -356,7 +356,7 @@ TCREQUESTER.checkIndicatorExists = function(indicator, indicatorType, completeIn
                 });
             }
 
-            // sort the list of indicators based on type 
+            // sort the list of indicators based on type
             VUEAPPMANAGER.phaseOneVue.indicators.sort(function(a, b) {
                 return a.type.localeCompare(b.type);
             });
@@ -401,7 +401,7 @@ TCREQUESTER.createIndicator = function(indicator, indicatorType) {
                         // make the indicator show up on the tab of indicators which exist in TC
                         nonExistIndicator.exists = true;
 
-                        // make the indicator invisible (on the tab of indicators that do not exist in TC) 
+                        // make the indicator invisible (on the tab of indicators that do not exist in TC)
                         nonExistIndicator.visible = false;
 
                         // mark the indicator as new (created in this 'session')
@@ -427,7 +427,7 @@ TCREQUESTER.createIndicator = function(indicator, indicatorType) {
                         // make the indicator show up on the tab of indicators which exist in TC
                         nonExistIndicator.exists = true;
 
-                        // make the indicator invisible (on the tab of indicators that do not exist in TC) 
+                        // make the indicator invisible (on the tab of indicators that do not exist in TC)
                         nonExistIndicator.visible = false;
 
                         // mark the indicator as new (created in this 'session')
@@ -451,7 +451,7 @@ TCREQUESTER.createIndicator = function(indicator, indicatorType) {
 
 function _setToggle(element, checked) {
     /* Set the given toggle element to the parameter passed as the 'checked' parameter. */
-    
+
     // set a timeout and then set the toggle to the desired value... the timeout isn't to be fancy... it will not work properly without a timeout
     window.setTimeout(function() {
         $(element)[0].checked = checked;
@@ -786,7 +786,7 @@ TCREQUESTER.addFileAction = function(fileAction, fileHash, statusBadgeElement) {
 
     // if there are no selected indicators, stop adding tags
     if (selectedIndicators === null) {
-        $.jGrowl("No Indicators selected...\nGo select some indicators and this file action will be here when you come back.", { group: 'failure-growl'});
+        $.jGrowl("No Indicators selected...\nGo select some indicators and this file behavior will be here when you come back.", { group: 'failure-growl'});
         return null;
     }
 
@@ -805,7 +805,7 @@ TCREQUESTER.addFileAction = function(fileAction, fileHash, statusBadgeElement) {
                 INDICATORIMPORTERUTILITY.handleStatusBadge(statusBadgeElement, "success");
             })
             .error(function(response) {
-                var message = 'Unable to create file action: ' + response.error;
+                var message = 'Unable to create file behavior: ' + response.error;
                 $.jGrowl(message, {group: 'failure-growl'});
                 console.error(message);
             });
@@ -878,7 +878,7 @@ TCREQUESTER.addRatings = function(threatRatingElement, confidenceRatingElement, 
     if (threatRating === "" && confidenceRating === "") {
         $.jGrowl("No valid rating provided. Enter a valid value for at least one of the ratings below.", { group: 'failure-growl'});
         return null;
-    } 
+    }
     // if the threat rating is not correct
     else if (0 > threatRating || threatRating > 5) {
         $.jGrowl("Incorrect threat rating provided. The value for the threat rating must be a float or integer between 0 and 5 (inclusive)", { group: 'failure-growl'});

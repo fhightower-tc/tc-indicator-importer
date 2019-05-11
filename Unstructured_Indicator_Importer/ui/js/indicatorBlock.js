@@ -113,7 +113,7 @@ INDICATORBLOCK.prototype.getBlockElement = function(indicatorType, indicatorCoun
 
     // add a file action button
     if (indicatorType !== "emailaddress") {
-        blockElementOptions.innerHTML += "<a style='margin-left: 0.5%' class='secondary button' href='#0' data-open='file-action-modal' title='Apply a profile to the selected indicators'>File Action</a> ";
+        blockElementOptions.innerHTML += "<a style='margin-left: 0.5%' class='secondary button' href='#0' data-open='file-action-modal' title='Apply a profile to the selected indicators'>File Behavior</a> ";
     }
 
     // if the indicator block is for hosts, add a whois/dns switch
