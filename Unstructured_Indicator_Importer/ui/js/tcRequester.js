@@ -24,7 +24,7 @@ TCREQUESTER.getAttributesFromDatastore = function() {
             VUEAPPMANAGER.modalVue.attributes = JSON.parse(response._source.text);
         })
         .error(function(response) {
-            $.jGrowl("Unable to pull attributes from the datastore.", { group: 'failure-growl' });
+            $.jGrowl("Unable to pull attributes from the datastore. See the console for more details.", {group: 'failure-growl', life: 10000});
             console.error('error response', response);
         })
         .request();
@@ -120,8 +120,8 @@ TCREQUESTER.getProfilesFromDatastore = function() {
             VUEAPPMANAGER.modalVue.profiles = JSON.parse(response._source.text);
         })
         .error(function(response) {
-            // print an error message
-            $.jGrowl('Error getting profiles from datastore: ' + response.error, {group: 'failure-growl'});
+            $.jGrowl('Error getting profiles from datastore. See the console for more details.', {group: 'failure-growl', life: 10000});
+            console.error('error response', response);
         })
         .request();
 };
