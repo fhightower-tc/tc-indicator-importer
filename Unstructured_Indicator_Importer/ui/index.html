@@ -109,7 +109,7 @@
                 <button class="close-button" data-close aria-label="Close reveal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
- 
+
                 <form id='association-typeahead'>
                     <div class="small-8 medium-8 large-8 columns">
                         <input id="association-typeahead-input" class='typeahead tt-query focused-input' type='text' placeholder='Start typing an association...' title='Start typing an association' autocomplete='off' spellcheck='false' />
@@ -190,7 +190,7 @@
             </div>
 
             <div class="reveal resized-modal" id="file-action-modal" data-reveal>
-                <h2>File Actions</h2>
+                <h2>File Behaviors</h2>
                 <button class="close-button" data-close aria-label="Close reveal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -205,13 +205,13 @@
 
                 <br>
 
-                <button id="file-action-modal-status" type="button" class="button" v-on:click="applyFileAction('#file-action-modal-status')">Add file action</button>
+                <button id="file-action-modal-status" type="button" class="button" v-on:click="applyFileAction('#file-action-modal-status')">Add file behavior</button>
 
                 <br>
 
                 <div class="callout primary">
                     <h5>Usage Instructions</h5>
-                    In this app, the file actions are created in the 'opposite' direction they are created in the platform. Instead of starting with the file on whose behaviour graph you would like the association to appear, in this app you select the indicators you would like to appear on the behaviour graph and then paste the file hash of the file indicator on whose behaviour graph the selected indicators will appear.
+                    In this app, the file behaviors are created in the 'opposite' direction they are created in the platform. Instead of starting with the file on whose behaviour graph you would like the association to appear, in this app you select the indicators you would like to appear on the behaviour graph and then paste the file hash of the file indicator on whose behaviour graph the selected indicators will appear.
                 </div>
             </div>
 
@@ -439,7 +439,7 @@
                         <div class="card-section">
                             <label>Find all: {{ findCount }}<input id="find-value" class="focused-input" type="text" name="find" v-on:keyup="getFindCount"></label>
                             <label>Replace with: <input id="replace-value" class="focused-input" type="text" name="replace"></label>
-                            
+
                             <button type="button" class="secondary button float-right" v-on:click="findAndReplace(undefined, undefined, true)">Find & replace</button>
                             <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="This automatically refangs indicators that have been defanged using common defanging techniques.">
                                 <button type="button" class="button secondary" onclick="takeAction()">
