@@ -620,7 +620,7 @@ TCREQUESTER.addAssociation = function(associationElement, statusBadgeElement) {
         VUEAPPMANAGER.phaseTwoVue.associatedGroups.push({
             name: groupName,
             id: groupID,
-            weblink: `https://app.threatconnect.com/auth/${groupType.toLowerCase()}/${groupType.toLowerCase()}.xhtml?${groupType.toLowerCase()}=${groupID}`
+            weblink: `${window.location.origin}/auth/${groupType.toLowerCase()}/${groupType.toLowerCase()}.xhtml?${groupType.toLowerCase()}=${groupID}`
         });
     }
 };
