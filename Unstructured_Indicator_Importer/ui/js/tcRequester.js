@@ -651,6 +651,9 @@ TCREQUESTER.addAttribute = function(attributeType, attributeValue, statusBadgeEl
             // clear the input fields
             VUEAPPMANAGER.modalVue.attributeValue = "";
             VUEAPPMANAGER.modalVue.attributeDefault = false;
+            VUEAPPMANAGER.modalVue.manuallySetAttributeType = "";
+            VUEAPPMANAGER.modalVue.manuallySetAttributeValue = "";
+            VUEAPPMANAGER.modalVue.manuallySetAttributeDefault = false;
         })
         .error(function(response) {
             var message = "Error adding attribute: " + response.error;

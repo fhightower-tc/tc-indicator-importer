@@ -128,6 +128,16 @@
                 <div id="attribute-ui">
                     <div v-if="wizardAttributes.length === 0 && additionalAttributes.length === 0">
                         Hmmm... there should be attributes showing up here. This app pulls attributes from the datastore, but it looks like there aren't any attributes in the datastore. You can find documentation for how and where to add attributes to the datastore under the "<b>Attributes in Datastore (required)</b>" heading <a href="https://gitlab.com/fhightower-tc/unstructured-indicator-importer#attributes-in-datastore-required" target="_blank">here</a>.
+
+                        <br><hr>
+
+                        <!-- If we can't load attributes from the datastore, allow the user to manually add attributes -->
+                        <p>You can add an attribute manually below:</p>
+
+                        <label>Attribute type:</label><input type="text" name="attributeType" placeholder="Enter an attribute type..." v-model="manuallySetAttributeType">
+                        <label>Attribute value:</label><textarea placeholder="Enter an attribute value..." v-model="manuallySetAttributeValue"></textarea>
+                        <label>Default: <input type="checkbox" name="" v-model=manuallySetAttributeDefault></label>
+                        <button id="attributeManualModalStatus" class="button" v-on:click="addAttributeManually('#attributeManualModalStatus', )">Add attribute</button>
                     </div>
                     <div id="attibute-value-input" class="row collapse" v-if="wizardAttributes.length > 0 || additionalAttributes.length > 0">
                       <div class="medium-3 large-4 columns">
@@ -150,7 +160,7 @@
                             <span v-if="selectedAttributeType == ''"><<< Click on an attribute type of the left to get started</span>
                             <h6><b>{{ selectedAttributeType }}</b></h6>
                             <div id="string" v-if="validationType == 'String'">
-                                <textarea rows="10" placeholder="Enter attribute here..." v-model="attributeValue"></textarea>
+                                <textarea rows="10" placeholder="Enter attribute value here..." v-model="attributeValue"></textarea>
                                 <label>Default: <input type="checkbox" name="" v-model=attributeDefault></label>
                             </div>
                             <div id="integer" v-if="validationType == 'Integer'">

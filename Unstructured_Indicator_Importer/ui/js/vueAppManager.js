@@ -99,6 +99,9 @@ VUEAPPMANAGER.modalVue = new Vue({
         selectedAttributeType: '',
         // the attributes below are test data that will be added dynamically when included in a real app
         attributes: [],
+        manuallySetAttributeType: '',
+        manuallySetAttributeValue: '',
+        manuallySetAttributeDefault: false,
         wizardAttributes: [],
         additionalAttributes: [],
         attributeValue: "",
@@ -196,6 +199,15 @@ VUEAPPMANAGER.modalVue = new Vue({
             }
 
             TCREQUESTER.addAttribute(this.selectedAttributeType, this.attributeValue, attributeModalStatus, this.attributeDefault);
+        },
+        addAttributeManually: function(attributeModalStatus) {
+            // move values from the manual fields to the standard attribute fields
+            this.selectedAttributeType = this.manuallySetAttributeType;
+            this.attributeValue = this.manuallySetAttributeValue;
+            this.attributeDefault = this.manuallySetAttributeDefault;
+
+            // add the new attribute
+            this.addAttribute(attributeModalStatus);
         },
         applyFileAction: function(statusElement) {
             /* Apply the given file action to the selected indicators. */
