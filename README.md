@@ -4,6 +4,11 @@ App for quickly and easily getting indicators into the platform and adding metad
 
 ![Indicator importer: quick and easy](demo.gif)
 
+## First time setup (for analysts in TC)
+Once the app is installed in your TC instance (see administration guide and Installation section), you may have to [add the app to your user account's "spaces"](https://kb.threatconnect.com/customer/en/portal/articles/2256255-spaces)
+
+ - On the TC menu, click the "Spaces" button at the top menu (not Add Menu Space) and go through the "Add New Space" option to add a workspace for the importer app
+
 ## Installation
 
 To install this app in ThreatConnect, use the following commands:
