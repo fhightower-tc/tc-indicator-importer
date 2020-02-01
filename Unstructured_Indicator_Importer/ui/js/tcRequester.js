@@ -21,7 +21,7 @@ TCREQUESTER.getAttributesFromDatastore = function() {
         .typeName('app-data')
         .command('attributes')
         .done(function(response) {
-            VUEAPPMANAGER.modalVue.attributes = JSON.parse(response._source.text);
+            VUEAPPMANAGER.modalVue.attributes = JSON.parse(response._source.data);
         })
         .error(function(response) {
             $.jGrowl("Unable to pull attributes from the datastore. See the console for more details.", {group: 'failure-growl', life: 10000});
@@ -117,7 +117,7 @@ TCREQUESTER.getProfilesFromDatastore = function() {
         .typeName('app-data')
         .command('indicatorProfiles')
         .done(function(response) {
-            VUEAPPMANAGER.modalVue.profiles = JSON.parse(response._source.text);
+            VUEAPPMANAGER.modalVue.profiles = JSON.parse(response._source.data);
         })
         .error(function(response) {
             $.jGrowl('Error getting profiles from datastore. See the console for more details.', {group: 'failure-growl', life: 10000});
