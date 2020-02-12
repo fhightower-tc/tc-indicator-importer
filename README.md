@@ -2,12 +2,7 @@
 
 App for quickly and easily getting indicators into the platform and adding metadata around them.
 
-![Indicator importer: quick and easy](demo.gif)
-
-## First time setup (for analysts in TC)
-Once the app is installed in your TC instance (see administration guide and Installation section), you may have to [add the app to your user account's "spaces"](https://kb.threatconnect.com/customer/en/portal/articles/2256255-spaces)
-
- - On the TC menu, click the "Spaces" button at the top menu (not Add Menu Space) and go through the "Add New Space" option to add a workspace for the importer app
+![Indicator importer: quick and easy](demos/demo.gif)
 
 ## Installation
 
@@ -24,6 +19,20 @@ make pack
 After running these commands, there will be a zip file named `TCS_-_Unstructured_Indicator_Importer.zip` in the top directory of the app which you can install in ThreatConnect.
 
 ## Setup
+
+### First Time Setup
+
+Once the app is installed in your TC instance (see administration guide and [Installation section](#installation)), you may have to [add the app to your user account's "spaces"](https://training.threatconnect.com/learn/article/spaces-kb-article):
+
+     - When logged into ThreatConnect, click the "Spaces" button at the top menu (not Add Menu Space)
+     - Click "ADD NEW SPACE" button
+     - Give the space a name and click "SAVE"
+     - Click "Add App" button
+     - Select "TCS - Unstructured Indicator Importer", give it another name (it can be the same name you previously used), and click "SAVE"
+
+Here is a demo setting up the app for the first time:
+
+![Indicator importer setup](demos/setup_spaces_app.gif)
 
 ### Attributes in Datastore (required)
 
