@@ -102,6 +102,12 @@ This app provides a functionality I'm calling "Indicator Profiles". It allows yo
 
 ## Changelog
 
+*(we are using [semantic versioning](https://semver.org/))* 
+
+### 4.0.0
+
+- Renaming the app to reflect the fact that we are handling both structured and unstructured content
+
 ### 3.1.1
 
 - The first version since we have started keeping a changelog
