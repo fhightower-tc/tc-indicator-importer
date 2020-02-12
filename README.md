@@ -92,12 +92,13 @@ This app provides a functionality I'm calling "Indicator Profiles". It allows yo
 
 ### Current Projects
 
-- Add handling for structured data types (e.g. csv and json) (see our progress [here](https://gitlab.com/fhightower-tc/tc-indicator-importer/-/milestones/1))
+- Add handling for CSV (see our progress [here](https://gitlab.com/fhightower-tc/tc-indicator-importer/-/milestones/1))
 
 ### Future Projects
 
 - Add ability to edit content (see [#18](https://gitlab.com/fhightower-tc/tc-indicator-importer/issues/18))
 - Improve deletion functions (see [#19](https://gitlab.com/fhightower-tc/tc-indicator-importer/issues/19))
+- Add ability to parse other structured data types
 - Build out documentation
 
 ## Changelog
