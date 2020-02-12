@@ -30,13 +30,13 @@ To install this app in ThreatConnect, use the following commands:
 
 ```
 # clone this repo
-git clone https://gitlab.com/fhightower-tc/unstructured-indicator-importer.git
-cd unstructured-indicator-importer
+git clone https://gitlab.com/fhightower-tc/tc-indicator-importer.git
+cd tc-indicator-importer
 # package the app
 make pack
 ```
 
-After running these commands, there will be a zip file named `TCS_-_Unstructured_Indicator_Importer.zip` in the top directory of the app which you can install in ThreatConnect.
+After running these commands, there will be a zip file named `TCS_-_Indicator_Importer.zip` in the top directory of the app which you can install in ThreatConnect.
 
 ## Setup
 
@@ -48,7 +48,7 @@ Once the app is installed in your TC instance (see administration guide and [Ins
 - Click "ADD NEW SPACE" button
 - Give the space a name and click "SAVE"
 - Click "Add App" button
-- Select "TCS - Unstructured Indicator Importer", give it another name (it can be the same name you previously used), and click "SAVE"
+- Select "TCS - Indicator Importer", give it another name (it can be the same name you previously used), and click "SAVE"
 
 Here is a demo setting up the app for the first time:
 
@@ -56,7 +56,7 @@ Here is a demo setting up the app for the first time:
 
 ### Attributes in Datastore (required)
 
-The unstructured indicator importer spaces app pulls attributes from the datastore. Thus, you will need to write a list of attributes like the one in [example_datastore_attributes.json](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/blob/master/example_datastore_attributes.json) to the datastore. This attributes json needs to be added in the following datastore:
+The indicator importer spaces app pulls attributes from the datastore. Thus, you will need to write a list of attributes like the one in [example_datastore_attributes.json](https://gitlab.com/fhightower-tc/tc-indicator-importer/-/blob/master/example_datastore_attributes.json) to the datastore. This attributes json needs to be added in the following datastore:
 
 ```
 /organization/app-data/attributes
@@ -92,12 +92,12 @@ This app provides a functionality I'm calling "Indicator Profiles". It allows yo
 
 ### Current Projects
 
-- Add handling for structured data types (e.g. csv and json) (see our progress [here](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/-/milestones/1))
+- Add handling for structured data types (e.g. csv and json) (see our progress [here](https://gitlab.com/fhightower-tc/tc-indicator-importer/-/milestones/1))
 
 ### Future Projects
 
-- Add ability to edit content (see [#18](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/issues/18))
-- Improve deletion functions (see [#19](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/issues/19))
+- Add ability to edit content (see [#18](https://gitlab.com/fhightower-tc/tc-indicator-importer/issues/18))
+- Improve deletion functions (see [#19](https://gitlab.com/fhightower-tc/tc-indicator-importer/issues/19))
 - Build out documentation
 
 ## Changelog
