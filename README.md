@@ -4,6 +4,26 @@ App for quickly and easily getting indicators into the platform and adding metad
 
 ![Indicator importer: quick and easy](demos/demo.gif)
 
+**NOTE:** In the past, this app has been focused on importing unstructured content. Moving forward, this app will be updated to handle both structured (e.g. csv and json) and unstructured content.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Setup](#setup)
+  - [First Time Setup](#first-time-setup)
+  - [Attributes in Datastore (required)](#attributes-in-datastore-required)
+  - [PDF Reader Playbook (optional)](#pdf-reader-playbook-optional)
+  - [URL Reader Playbook (optional)](#url-reader-playbook-optional)
+  - [OCR Reader Playbook (optional)](#ocr-reader-playbook-optional)
+- [Advanced Usage](#advanced-usage)
+  - [Custom Metrics](#custom-metrics)
+  - [Indicator Profiles](#indicator-profiles)
+- [Roadmap](#roadmap)
+  - [Current Projects](#current-projects)
+  - [Future Projects](#future-projects)
+- [Changelog](#changelog)
+- [Credits](#credits)
+
 ## Installation
 
 To install this app in ThreatConnect, use the following commands:
@@ -24,11 +44,11 @@ After running these commands, there will be a zip file named `TCS_-_Unstructured
 
 Once the app is installed in your TC instance (see administration guide and [Installation section](#installation)), you may have to [add the app to your user account's "spaces"](https://training.threatconnect.com/learn/article/spaces-kb-article):
 
-     - When logged into ThreatConnect, click the "Spaces" button at the top menu (not Add Menu Space)
-     - Click "ADD NEW SPACE" button
-     - Give the space a name and click "SAVE"
-     - Click "Add App" button
-     - Select "TCS - Unstructured Indicator Importer", give it another name (it can be the same name you previously used), and click "SAVE"
+- When logged into ThreatConnect, click the "Spaces" button at the top menu (not Add Menu Space)
+- Click "ADD NEW SPACE" button
+- Give the space a name and click "SAVE"
+- Click "Add App" button
+- Select "TCS - Unstructured Indicator Importer", give it another name (it can be the same name you previously used), and click "SAVE"
 
 Here is a demo setting up the app for the first time:
 
@@ -67,6 +87,24 @@ Every time this app is run, it posts content to a [custom metric](https://docs.t
 ### Indicator Profiles
 
 This app provides a functionality I'm calling "Indicator Profiles". It allows you to form a template made up of attributes and tags that can be applied to indicators in bulk. For example, I may want to have a profile for callback URLs that applies the "C2" tag and an "IP and Host Usage" attribute with a value of "C2". If you have questions, raise and issue and I can add more documentation about how to make these.
+
+## Roadmap
+
+### Current Projects
+
+- Add handling for structured data types (e.g. csv and json) (see our progress [here](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/-/milestones/1))
+
+### Future Projects
+
+- Add ability to edit content (see [#18](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/issues/18))
+- Improve deletion functions (see [#19](https://gitlab.com/fhightower-tc/unstructured-indicator-importer/issues/19))
+- Build out documentation
+
+## Changelog
+
+### 3.1.1
+
+- The first version since we have started keeping a changelog
 
 ## Credits
 
